@@ -1,0 +1,62 @@
+@taildwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#search-book {
+  background-image: url(/icons/sortDown.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+#search-book::-ms-expand {
+  display: none;
+}
+
+#search-book option {
+  @apply bg-white text-[#000842];
+}
+
+#search-book option:hover {
+  @apply bg-[#0A7ABF] text-white;
+}
+
+#search-help::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  right: 3px;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  border-bottom: 15px solid #0a7abf;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  z-index: 10;
+}
+
+.increase-scale:hover {
+  transform: scale(110%);
+}
+
+.reactSelect {
+  @apply w-full border-0 bg-grey text-base font-[400] leading-[normal] text-blueDark placeholder-[#ABABAB] focus:outline-none;
+}
+.divContent {
+  @apply relative mb-14 flex h-10 w-full items-center gap-2 border-0 border-b-2 border-solid border-blueDark;
+}
+.errorContainer {
+  @apply absolute -bottom-6 text-xs font-bold text-red-500;
+}
+.labelForm {
+  @apply text-base font-bold leading-[normal] text-blueLight;
+}
